@@ -3,8 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="media.css">
+    <link rel="stylesheet" href="about.css">
     <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Goblin+One" />
     <title>Document</title>
 </head>
@@ -19,25 +18,23 @@
             </ul>
             <span id="menu">&#9776</span>
         </div>
-
+      <script>
+    const menu = document.getElementById('menu=btn');
+    const navLinks = document.getElementById('nav-links');
+    menu.addEventListener('click', () => {
+      navLinks.classList.toggle('show=menu');
+    });
+    </script>
         <div class="img-section">
-            <img src="ses.jpg" alt="My Image">
+            <img src="ses.jpg" alt="">
         </div>
 
         <div class="text-section">
             <ul>
-                <li><b>Hi I'm Symon Eleazar E. Fernandez! <br>I am a 3rd year Bachelor of Science in Information Technology student.</b></li>
-                <li><b>"Be Passionate, <br> Be Optimistic, <br> Be Grateful."</b></li>
+                <li> <b>I was born and raised in Lapu-Lapu Cebu City, <br>I am 23yrs old and living in Burgos St. Bais City Negros oriental</b> </li>
+                <li> <b>"Always up for a new adventure."</b> </li>
             </ul>
         </div>
     </div>
-
-    <script>
-        const menu = document.getElementById('menu');
-        const navLinks = document.getElementById('nav-links');
-        menu.addEventListener('click', () => {
-            navLinks.classList.toggle('show');
-        });
-    </script>
 </body>
 </html>

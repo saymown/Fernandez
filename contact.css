@@ -37,6 +37,7 @@ body{
     color: white;
     cursor: pointer;
 }
+
 .navbar{
     padding: 20px;
     grid-column: 1/11;
@@ -88,6 +89,9 @@ body{
     padding: 80px 0px 0px 5%;
     color: black;
     display: grid;
+    margin-top: 4rem;
+    text-shadow: 1.5px 1.5px 0px rgb(255, 255, 255), -1.5px -1.5px 0px rgb(255, 255, 255), 
+                1.5px -1.5px 0px rgb(255, 255, 255), -1.5px 1.5px 0px rgb(255, 255, 255);
     
 
     ul{
@@ -96,14 +100,17 @@ body{
         text-align: center;
     }
                 li:nth-child(1) {
-                font-family:"Inria Serif";
-                font-style:italic;
                 font-size: 3rem;
+                padding: 0px 0px 0px 0px;
             }
 
     li:nth-child(2){ 
         font-size: 3rem;
-        padding: 80px 0px 0px 0px;
+        padding: 50px 90px 0px 0px;
+    }
+        li:nth-child(3){ 
+        font-size: 3rem;
+        padding: 50px 240px 0px 0px;
     }
 }
 @media screen and (max-width: 1700px){
@@ -130,7 +137,7 @@ body{
     }
 
     .text-section{
-        padding: 100px 0px 150px 120px;
+        padding: 80px 0px 150px 120px;
        grid-column: 4/11;
             li:nth-child(1) {
                     font-size: 3.3rem;
@@ -138,7 +145,11 @@ body{
                 }
 
                 li:nth-child(2) {
-                    font-size: 2.5rem;
+                    font-size: 3.3rem;
+                }
+                li:nth-child(3) {
+                    font-size: 3.3rem;
+                    padding: 55px 300px 0px 0px;
                 }
     }
 }
@@ -167,6 +178,7 @@ body{
 
     .text-section{
         padding: 120px 0px 170px 150px;
+        margin-top: -28rem;
         grid-column: 3/11;
             li:nth-child(1) {
                     margin-top: 10rem;
@@ -174,7 +186,11 @@ body{
                 }
 
                 li:nth-child(2) {
-                    font-size: 2.5rem;
+                    font-size: 2.8rem;
+                }
+                li:nth-child(3) {
+                    font-size: 2.8rem;
+                    padding: 55px 240px 0px 0px;
                 }
     }
 }
@@ -206,12 +222,17 @@ body{
         padding: 100px 0px 130px 120px;
         grid-column: 3/11;
             li:nth-child(1) {
-                    margin-top: -25rem;
+                    margin-top: 6rem;
                     font-size: 2.5rem;
                 }
 
                 li:nth-child(2) {
-                    font-size: 2.3rem;
+                    font-size: 2.5rem;
+                    padding: 15px 70px 0px 0px;
+                }
+                li:nth-child(3) {
+                    font-size: 2.5rem;
+                    padding: 15px 230px 0px 0px;
                 }
     }
 }
@@ -239,15 +260,20 @@ body{
     }
 
     .text-section{
-        padding: 120px 0px 170px 150px;
+        padding: 105px 0px 170px 150px;
         li:nth-child(1) {
-                    margin-top: -22rem;
+                    margin-top: 7rem;
                     font-size: 2rem;
+                    padding: 15px 45px 0px 0px;
                 }
 
                 li:nth-child(2) {
-                    margin-top: -2.5rem;
-                    font-size: 1.8rem;
+                    padding: 10px 105px 0px 0px;
+                    font-size: 2rem;
+                }
+                li:nth-child(3) {
+                    font-size: 2rem;
+                    padding: 10px 230px 0px 0px;
                 }
     }
 }
@@ -276,16 +302,21 @@ body{
     }
 
     .text-section{
-        padding: 120px 0px 170px 100px;
+        padding: 138px 0px 170px 100px;
        li:nth-child(1) {
-                    margin-top: -19rem;
+                    padding: 10px 0px 0px 0px;
                     font-size: 2rem;
                 }
 
                 li:nth-child(2) {
-                    margin-top: -3rem;
-                    font-size: 1.8rem;
+                    padding: 10px 55px 0px 0px;
+                    font-size: 2rem;
                 }
+                 li:nth-child(3) {
+                    padding: 10px 185px 0px 0px;
+                    font-size: 2rem;
+                }
+                
     }
 }
 
@@ -314,22 +345,30 @@ body{
     }
 
     .text-section{
-        padding: 120px 0px 170px 50px;
+        padding: 160px 0px 170px 50px;
        li:nth-child(1) {
-                    margin-top: -18rem;
+                    padding: 10px 0px 0px 0px;
                     font-size: 1.8rem;
                 }
 
                 li:nth-child(2) {
-                    margin-top: -2rem;
-                    font-size: 1.7rem;
+                    padding: 10px 45px 0px 0px;
+                    font-size: 1.8rem;
+                }
+                li:nth-child(3) {
+                    padding: 10px 165px 0px 0px;
+                    font-size: 1.8rem;
                 }
     }
 
 }
 
 @media screen and (max-width: 760px){
-    
+        body{
+    background-image: url(broom.jpg);
+    background-repeat:no-repeat;
+    background-size: cover;
+}
     .navbar{
         ul{
             display: none;
@@ -342,11 +381,23 @@ body{
             font-size: 30px;
         }
 
+    .nav-links {
+        display: none;
+        width: 100%;
+        text-align: left;
+        flex-direction: column;
+        padding: 10px 0;
+    }
+
+    .nav-links.show-menu {
+        display: flex;
+    }
+
         #logo{
             padding: 0px 0px 0px 10px;
             font-size: 30px;
         }
- .nav-links {
+        .nav-links {
         display: none;
         width: 100%;
         flex-direction: column;
@@ -361,10 +412,7 @@ body{
         margin: 10px 0;
         text-align: center;
     }
-
-    #menu {
-        display: block;
-    }
+  
     }
 
     .img-section{
@@ -378,18 +426,22 @@ body{
 
     .text-section{
         grid-column: 3/11;
-        padding: 50px 0px 0px 80px;
+        padding: 45px 0px 0px 80px;
         display: flex;
         justify-content: center;
         align-items: center;
         li:nth-child(1) {
-                    margin-top: -14rem;
+                    padding: 10px 0px 0px 0px;
                     font-size: 1.3rem;
                 }
 
                 li:nth-child(2) {
-                    font-size: 1.1rem;
-                    margin-top: -2.8rem;
+                    font-size: 1.3rem;
+                    padding: 10px 35px 0px 0px;
+                }
+                li:nth-child(3) {
+                    font-size: 1.3rem;
+                    padding: 10px 118px 0px 0px;
                 }
     }
 }
@@ -425,19 +477,23 @@ body{
 
     .text-section{
         grid-column: 1/11;
-        padding: 0px 0px 20px 0px;
+        padding: 500px 0px 30px 0px;
         display: flex;
         justify-content: center;
         align-items: center;
         margin-right:absolute;
        li:nth-child(1) {
-                    margin-top: 5rem;
+                    padding: 10px 0px 0px 0px;
                     font-size: 1.3rem;
                 }
 
                 li:nth-child(2) {
-                    margin-top: -3rem;
-                    font-size: 1.1rem;
+                    padding: 10px 30px 0px 0px;
+                    font-size: 1.3rem;
+                }
+                li:nth-child(3) {
+                    font-size: 1.3rem;
+                    padding: 10px 115px 0px 0px;
                 }
     }
 }
@@ -472,17 +528,22 @@ body{
 
     .text-section{
         grid-column: 1/11;
-        padding: 0px 0px 0px 10px;
+        padding: 500px 0px 30px 10px;
         display: flex;
         justify-content: center;
         align-items: center;
          li:nth-child(1) {
                     font-size: 1.2rem;
+                    padding: 10px 0px 0px 0px;
                 }
 
                 li:nth-child(2) {
-                    margin-top: -3.5rem;
-                    font-size: 1rem;
+                    padding: 10px 30px 0px 0px;
+                    font-size: 1.2rem;
+                }
+                li:nth-child(3) {
+                    font-size: 1.2rem;
+                    padding: 10px 110px 0px 0px;
                 }
     }
 
@@ -521,17 +582,22 @@ body{
 
     .text-section{
         grid-column: 1/11;
-        padding: 0px 0px 0px 10px;
+        padding: 500px 0px 0px 10px;
         display: flex;
         justify-content: center;
         align-items: center;
        li:nth-child(1) {
                     font-size: 1rem;
+                    padding: 10px 0px 0px 0px;
                 }
 
                 li:nth-child(2) {
-                    margin-top: -3.5rem;
-                    font-size: 0.9rem;
+                    padding: 10px 25px 0px 0px;
+                    font-size: 1rem;
+                }
+                    li:nth-child(3) {
+                    font-size: 1rem;
+                    padding: 10px 90px 0px 0px;
                 }
     }
 
